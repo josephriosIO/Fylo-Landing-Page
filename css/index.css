@@ -24,16 +24,33 @@ html {
   box-sizing: border-box;
   background: hsl(217, 28%, 15%);
 }
-.container-intro {
-  width: 80%;
+.container-intro,
+.container-feature {
+  width: 100%;
   margin: 0 auto;
   height: 100vh;
+}
+.container-intro {
+  position: relative;
+}
+.wavy {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: -1;
+}
+.container-feature,
+.feature {
+  width: 100%;
+  background: hsl(218, 28%, 13%);
+  position: relative;
+  z-index: 1;
 }
 .nav {
   margin-top: 3rem;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .nav__logo {
   margin-left: 1rem;
@@ -56,6 +73,7 @@ html {
   margin-right: 0;
 }
 .header {
+  position: relative;
   margin-top: 6rem;
   text-align: center;
 }
@@ -82,4 +100,78 @@ html {
   color: hsl(0, 0%, 100%);
   font-size: 1.6rem;
   font-weight: 700;
+}
+.feature {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.feature__box {
+  margin: 2rem 4rem;
+  height: 40rem;
+  width: 33%;
+  align-self: stretch;
+  text-align: center;
+}
+.feature__text--heading {
+  font-size: 3rem;
+  color: hsl(0, 0%, 100%);
+}
+.feature__text--decscription {
+  color: #969da7;
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+.feature__intro--img {
+  width: 40%;
+  height: auto;
+  margin: 4rem;
+}
+.feature__texts {
+  color: hsl(0, 0%, 100%);
+  width: 40%;
+}
+.feature__texts--heading {
+  width: 100%;
+  font-size: 3rem;
+  font-family: "Raleway";
+  line-height: 1.8;
+}
+.feature__texts--decscription {
+  width: 100%;
+  font-size: 2rem;
+  font-family: "Open Sans";
+  line-height: 1.6;
+  margin-bottom: 3.3rem;
+}
+.feature__button {
+  border: none;
+  border-bottom: 1px solid hsl(176, 68%, 64%);
+  background: transparent;
+  color: hsl(176, 68%, 64%);
+  font-size: 2.1rem;
+  padding: 0;
+  padding-right: 2rem;
+  position: relative;
+}
+.feature__button:after {
+  content: "";
+  width: 2rem;
+  height: 1.5rem;
+  background-image: url("../images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-left: 9.5rem;
+  top: 0%;
+  transform: translateY(30%);
+}
+.boxes {
+  padding-top: 6rem;
+}
+.feature-bottom {
+  background: hsl(218, 28%, 13%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
